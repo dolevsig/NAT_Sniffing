@@ -4,7 +4,7 @@ import inspect
 
 def initializer(func):
     """
-    Automatically assigns the parameters.
+    Automatically assigns the parameters. Use as decorator
 
     >>> class process:
     ...     @initializer

@@ -1,5 +1,6 @@
 import Consts
-from scapy.all import *
+from scapy.layers.dns import dnstypes
+from scapy.layers.dns import DNS
 
 """
     Check if counter of dns packet is valid
