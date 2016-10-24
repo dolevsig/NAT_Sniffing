@@ -19,11 +19,10 @@ def create_streams(pckts):
 def main(pcap_folder):
     summaries = []
     fls = os.listdir(pcap_folder)
-    #for filename in fls:
-    filename = r"D:\temp\win_2.cap"
-    pckts = Utiils.extract_packets(filename)
-        #pckts = extract_packets(os.path.join(pcap_folder, filename))
-    pckts = filter_only_win_10(pckts)
+    for filename in fls:
+    #filename = r"D:\temp\win_2.cap"
+    pckts = Utiils.extract_packets(os.path.join(pcap_folder, filename))
+    #pckts = filter_only_win_10(pckts)
     streams_by_IPID = create_streams(pckts)
     summary = Summary.create_summary(streams_by_IPID, filename)
     summaries.append(summary)
